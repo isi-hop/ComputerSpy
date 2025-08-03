@@ -42,6 +42,8 @@ public class ComputerSpy {
         System.out.println();
         System.out.println("Système d'exploitation : " + os);
         System.out.println("Architecture : " + System.getProperty("os.arch"));
+        System.out.println("Uptime :"+FormatUtil.formatElapsedSecs(os.getSystemUptime()));
+        System.out.println("Nombre de Threads :"+os.getThreadCount());
 
         System.out.println("\n=== Informations sur le processeur ===");
         System.out.println("Nom : " + processor.getProcessorIdentifier().getName());
@@ -217,4 +219,6 @@ public class ComputerSpy {
         System.out.println("isihop.fr : Tondeur Hervé (2025)");
         System.out.println("================================");
     }
+    
+    
 }
